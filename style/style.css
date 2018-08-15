@@ -1,0 +1,176 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+body {
+	line-height:1;
+	font-size:12px;
+	font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+	background:url(../style/login/login_bg_top.jpg) center 0 no-repeat;
+	color:#333;
+}
+a {
+	vertical-align:baseline;
+	background:transparent;
+	text-decoration:none;
+	outline:none;
+}
+ul {list-style:none;}
+em,i {display:inline-block;font-style:normal;vertical-align:middle;}
+/*Common:0*/
+.dis_0 {display:none!important;}
+.dis_1 {display:block!important;}
+.clearfix:after {
+	visibility:hidden;
+  	display:block;
+  	font-size:0;
+  	content:" ";
+  	clear:both;
+  	height:0;
+}
+.clearfix{*zoom:1;}
+.aw:before,.aw:after {
+	content:"";
+	overflow:hidden;
+	width:0;height:0;
+	border-style:dashed;
+	border-color:transparent;
+	position:absolute;
+}
+.btn {
+	display:block;
+	text-align:center;
+	box-sizing:border-box;
+	font-size:0;
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+	font-family:'microsoft yahei';
+}
+.btn>em {font-size:14px;}
+.img>img {display:block;width:100%;}
+.ico {
+	display:inline-block;width:24px;height:24px;
+	vertical-align:middle;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	margin-right:6px;
+}
+.com-input {	
+	display:block;
+	box-sizing:border-box;
+	width:100%;height:42px;line-height:42px;
+	border:none;outline:none;
+	padding:0 10px 0 10px;
+	transition:opacity 0.3s;
+	background-color:transparent;
+	font-family:'microsoft yahei';
+	font-size:14px;
+}
+.com-input::-webkit-input-placeholder {color:#bbb;}
+.com-input:focus::-webkit-input-placeholder {
+    transition:opacity 0.3s 0.03s ease;
+    opacity:0.38;
+}
+textarea.com-input {height:80px;padding:10px;line-height:1.45;} 
+/*ComTitle:0*/
+/*com-tip:0*/
+.com-tip {
+	display:none;
+	position:absolute;bottom:0;left:0;right:0;
+	height:48px;line-height:48px;
+	background-color:rgba(0,0,0,.8);
+	color:#fff;
+	text-align:center;
+	z-index:9;
+	font-size:12px;
+}
+.com-tip.top {top:0;bottom:auto;}
+.com-tip.toast {
+	top:50%;left:50%;bottom:auto;right:auto;
+	width:160px;height:auto;line-height:1.2;
+	min-height:32px;
+	max-height:80px;
+	padding:8px 8px;
+	margin-top:-16px;
+	margin-left:-80px;
+	border-radius:4px;
+}
+/*com-tip:1*/
+/*login:0*/
+#bd_login {background:url(img/login_bg.jpg) center 0 no-repeat;}
+#bd_login:before {
+	content:"";
+	width:320px;height:90px;
+	position:fixed;top:0;z-index:1;
+	background:url(img/guoqi.png) 0 0 no-repeat;
+}
+#login {
+	width:360px;
+	position:absolute;left:50%;top:50%;z-index:9;
+	margin:-240px 0 0 -180px;
+	font-size:14px;
+}
+#login>.title {
+	height:180px;margin-bottom:8px;
+	background:url(img/login_title.png) center 0 no-repeat;
+}
+#login>.title>h1 {display:none;}
+
+#login>.main {	
+	position: relative;
+	background-color:#da3835;
+	border-radius:2px;
+	box-shadow:0 0 50px rgba(0,0,0,.1);
+	padding:24px;
+}
+
+.frm-login {position:relative;background-color:#fff;border-radius:2px;}
+.frm-login>li {position:relative;border-bottom:1px solid #eee;}
+.frm-login>li:last-child {border:none;}
+.frm-login>li>label {position:absolute;top:0;left:16px;height:48px;line-height:48px;color:#999;}
+.frm-login + .action {margin-top:16px;}
+.frm-login .com-input {padding-left:72px;height:48px;line-height:48px;}
+
+
+.frm-login .ico {
+	position:absolute;
+	left:12px;top:12px;margin:0;
+	background:url(img/login_icos.png) -24px 0 no-repeat;
+	text-indent:-9999px;
+}
+.frm-login .ico.pwd {background-position-y:-24px;}
+.frm-login .ico.code {background-position-y:-48px;}
+.frm-login .ico + .com-input {padding-left:48px;}
+
+#login .btn.submit {
+	width:100%;
+	height:48px;line-height:48px;
+	border-radius:2px;
+	font-size:0px;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f2d6d6',GradientType=0 );
+	background-color:#ccdceb;
+	background:linear-gradient(#fff,#f2d6d6);
+	box-shadow:0 2px 0 rgba(0,0,0,.15);
+}
+#login .btn.submit>em {font-size:16px;color:#da3835;}
+/*login:1*/

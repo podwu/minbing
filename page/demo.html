@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../style/style.css">
+<title>图表</title>
+<style>
+.com-tb .tb-list>li,
+.com-tb .tb-hd {overflow:hidden;zoom:1;}
+.com-tb .tb-list {height:200px;overflow-y:auto;}
+.com-tb .tb-list>li {border-top:1px solid #eee;}
+.com-tb .tb-list>li:last-child {border-bottom:1px solid #eee;}
+.com-tb .tb-list>li:first-child {border:none;}
+.com-tb .tb-hd {
+	border:1px solid #eee;
+	background-color:#f9f9f9;
+}
+
+.com-tb .tb-td {
+	float:left;width:25%;
+	color:#333;
+	padding:12px 0px 12px 8px;
+	line-height:1.25;
+	word-wrap:break-word;
+}
+.com-tb .tb-hd .tb-td {color:#999;}
+.tb-td.title {color:#999;}
+
+
+</style>
+</head>
+<body>
+<div id="chart_1" style="width:280px;height:240px"></div>
+<div id="chart_2" style="width:280px;height:240px"></div>
+<div id="chart_3" style="width:280px;height:240px"></div>
+<div id="chart_4" style="width:280px;height:240px"></div>
+<div id="chart_5" style="width:280px;height:240px">
+	<h3>区域民兵力量</h3>
+	<div class="com-tb">
+		<div class="tb-hd">
+			<span class="tb-td title">县区</span>
+			<span class="tb-td num">应急力量</span>
+			<span class="tb-td num">专业力量</span>
+			<span class="tb-td num">特殊力量</span>
+		</div>
+		<ul class="tb-list">
+        	<li>
+                <em class="tb-td title">浔阳区</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">濂溪区</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">柴桑区</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">武宁县</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">修水县</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">永修县</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">德安县</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">都昌县</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">湖口县</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">彭泽县</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">瑞昌市</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">共青城市</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+			<li>
+                <em class="tb-td title">庐山市</em>
+				<em class="tb-td num">123</em>
+                <em class="tb-td num">231</em>
+				<em class="tb-td num">161</em>
+            </li>
+        </ul>
+	</div>
+</div>
+<div id="chart_6" style="width:280px;height:240px"></div>
+
+<div id="chart_7" style="width:560px;height:240px"></div>
+<div id="chart_8" style="width:560px;height:240px"></div>
+<div id="chart_9" style="width:560px;height:240px"></div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.nicescroll.min.js"></script>
+<script src="../js/hc/hc.js"></script>
+<script src="../js/hc/hc-3d.js"></script>
+<script>
+$(".tb-list").niceScroll({cursorborder:"",cursorcolor:"#ddd",boxzoom:true,touchbehavior:true});
+
+//各兵种数量
+$('#chart_1').highcharts({
+	chart: {type: 'bar',backgroundColor: 'none'},
+	title: {text: '各兵种数量',align: 'left'},
+	credits:{enabled: false},
+	xAxis: {categories: ['民兵', '陆军', '空军', '海军', '特种兵'],},
+	yAxis: {visible: false},
+	plotOptions: {
+		bar: {
+			dataLabels: {
+				enabled: true,
+				allowOverlap: true // 允许数据标签重叠
+			}
+		}
+	},
+	legend: {
+		layout: 'vertical',
+		align: 'right',
+		verticalAlign: 'top',
+		x: 0,
+		y: 0,
+		floating: true,
+		borderWidth: 1,
+		backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF')
+	},
+	series: [{
+		name: '分队数',
+		data: [12, 31, 32, 12, 22]
+	}, {
+		name: '人数',
+		data: [78, 198, 200, 88, 123]
+	}]
+});
+
+//区域数量统计
+$('#chart_2').highcharts({
+    chart: {type: 'column'},
+	title: {text: '各区域分队及民兵数',align: 'left'},
+	credits:{enabled: false},
+	xAxis: {
+		categories: [
+			'浔阳区',
+			'濂溪区',
+			'柴桑区',
+			'武宁县',
+			'修水县',
+			'永修县',
+			'德安县',
+			'都昌县',
+			'湖口县',
+			'彭泽县',
+			'瑞昌市',
+			'共青城市',
+			'庐山市'
+		],
+		crosshair: true
+	},
+	yAxis: {
+		visible: false
+	},
+	plotOptions: {
+		column: {
+			borderWidth: 0,
+			stacking: 'normal'
+		}
+	},
+	series: [
+		{
+			name: '民兵数',
+			data: [123,234,123,344,155,267,155,124,145,256,155,263,124]
+		},
+		{
+			name: '分队数',
+			data: [12,23,12,33,15,25,16,18,19,26,36,33,15]
+		}
+	]
+});
+
+//民兵性别统计
+$('#chart_3').highcharts({
+	chart: {
+		type: 'pie',
+		options3d: {
+			enabled: true,
+			alpha: 45
+		}
+	},
+	title: {text: '民兵性别统计',align: 'left'},
+	credits:{enabled: false},
+	plotOptions: {
+		pie: {
+			innerSize:50,
+			depth: 25,
+			dataLabels: {
+				enabled: true,
+				//format: '<b>{point.name}</b>:{y}',
+				style: {
+						color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			}
+		}
+	},
+	series: [{
+		name: '民兵人数',
+		data: [
+			['男性', 940],
+			['女性', 60],
+		]
+	}]
+});
+
+//民兵建制统计
+$('#chart_4').highcharts({
+	chart: {type: 'bar'},
+	title: {text: '民兵建制统计',align: 'left'},
+	credits:{enabled: false},
+	xAxis: {
+		categories: ['团', '营', '连', '排']
+	},
+	yAxis: {
+		min: 0,
+		title: {
+			text: '民兵人数'
+		},
+		visible: false
+	},
+	legend: {enabled: false},
+	plotOptions: {
+		series: {
+			stacking: 'normal'
+		}
+	},
+	series: [{
+		name: '浔阳区',
+		data: [2, 4, 8, 16]
+	},{
+		name: '濂溪区',
+		data: [2, 4, 8, 16]
+	},{
+		name: '柴桑区',
+		data: [2, 4, 8, 16]
+	},{
+		name: '武宁县',
+		data: [2, 4, 8, 16]
+	},{
+		name: '修水县',
+		data: [2, 4, 8, 16]
+	},{
+		name: '永修县',
+		data: [2, 4, 8, 16]
+	},{
+		name: '德安县',
+		data: [2, 4, 8, 16]
+	},{
+		name: '都昌县',
+		data: [2, 4, 8, 16]
+	},{
+		name: '湖口县',
+		data: [2, 4, 8, 16]
+	},{
+		name: '彭泽县',
+		data: [2, 4, 8, 16]
+	},{
+		name: '瑞昌市',
+		data: [2, 4, 8, 16]
+	},{
+		name: '共青城市',
+		data: [2, 4, 8, 16]
+	},{
+		name: '庐山市',
+		data: [2, 4, 8, 16]
+	}]
+});
+
+//民兵年龄统计
+$('#chart_6').highcharts({
+	chart: {
+		type: 'pie',
+		options3d: {
+			//enabled: true,
+			alpha: 45
+		}
+	},
+	title: {text: '民兵年龄统计',align: 'left'},
+	credits:{enabled: false},
+	plotOptions: {
+		pie: {
+			//innerSize:50,
+			//depth: 25,
+			dataLabels: {
+				enabled: false,
+				//format: '<b>{point.name}</b>:{y}',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			},
+			showInLegend: true
+		}
+	},
+	series: [{
+		name: '民兵年龄',
+		data: [
+			['18至35岁', 650],
+			['36岁以上', 350],
+		]
+	}]
+});
+</script>
+</body>
+</html>
