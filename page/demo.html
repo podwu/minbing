@@ -4,37 +4,13 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="../style/style.css">
 <title>图表</title>
-<style>
-.com-tb .tb-list>li,
-.com-tb .tb-hd {overflow:hidden;zoom:1;}
-.com-tb .tb-list {height:200px;overflow-y:auto;}
-.com-tb .tb-list>li {border-top:1px solid #eee;}
-.com-tb .tb-list>li:last-child {border-bottom:1px solid #eee;}
-.com-tb .tb-list>li:first-child {border:none;}
-.com-tb .tb-hd {
-	border:1px solid #eee;
-	background-color:#f9f9f9;
-}
-
-.com-tb .tb-td {
-	float:left;width:25%;
-	color:#333;
-	padding:12px 0px 12px 8px;
-	line-height:1.25;
-	word-wrap:break-word;
-}
-.com-tb .tb-hd .tb-td {color:#999;}
-.tb-td.title {color:#999;}
-
-
-</style>
 </head>
 <body>
-<div id="chart_1" style="width:280px;height:240px"></div>
-<div id="chart_2" style="width:280px;height:240px"></div>
-<div id="chart_3" style="width:280px;height:240px"></div>
-<div id="chart_4" style="width:280px;height:240px"></div>
-<div id="chart_5" style="width:280px;height:240px">
+<div id="chart_1" style="width:320px;height:240px"></div>
+<div id="chart_2" style="width:320px;height:240px"></div>
+<div id="chart_3" style="width:320px;height:240px"></div>
+<div id="chart_4" style="width:320px;height:240px"></div>
+<div id="chart_5" style="width:320px;height:240px">
 	<h3>区域民兵力量</h3>
 	<div class="com-tb">
 		<div class="tb-hd">
@@ -125,11 +101,11 @@
         </ul>
 	</div>
 </div>
-<div id="chart_6" style="width:280px;height:240px"></div>
+<div id="chart_6" style="width:320px;height:240px"></div>
 
-<div id="chart_7" style="width:560px;height:240px"></div>
-<div id="chart_8" style="width:560px;height:240px"></div>
-<div id="chart_9" style="width:560px;height:240px"></div>
+<div id="chart_7" style="width:640px;height:240px"></div>
+<div id="chart_8" style="width:640px;height:240px"></div>
+<div id="chart_9" style="width:640px;height:240px"></div>
 
 <script src="../js/jquery.min.js"></script>
 <script src="../js/jquery.nicescroll.min.js"></script>
@@ -143,7 +119,7 @@ $('#chart_1').highcharts({
 	chart: {type: 'bar',backgroundColor: 'none'},
 	title: {text: '各兵种数量',align: 'left'},
 	credits:{enabled: false},
-	xAxis: {categories: ['民兵', '陆军', '空军', '海军', '特种兵'],},
+	xAxis: {categories: ['保障军', '陆军', '海军', '空军', '火箭军'],},
 	yAxis: {visible: false},
 	plotOptions: {
 		bar: {
@@ -345,6 +321,43 @@ $('#chart_6').highcharts({
 		]
 	}]
 });
+
+//历年训练成绩统计
+$('#chart_7').highcharts({
+	chart: {
+		type: 'column'
+		//type: 'area'
+	},
+	title: {text: '历年训练成绩',align: 'left'},
+	credits:{enabled: false},
+	xAxis: {
+		categories: [
+			'射击','队列','战术','救护','内务','理论'
+		],
+		crosshair: true
+	},
+	yAxis: {
+		min: 0,
+		visible: false
+	},
+	plotOptions: {
+		/*
+		area: {
+			stacking: 'normal',
+			//lineColor: '#666666',
+			lineWidth: 1,
+		}
+		*/
+	},
+	series: [{
+		name: '2017年',
+		data: [80,76,66,90,75,88]
+	},{
+		name: '2018年',
+		data: [85,86,76,88,80,78]
+	}]
+});
+
 </script>
 </body>
 </html>

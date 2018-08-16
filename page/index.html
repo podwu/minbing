@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../style/style.css">
+<title>九江军分区民兵平台</title>
+</head>
+<body id="bd_index">
+<style>
+#bd_index {
+	background-color:#eee;
+	background:#eee url(../style/img/index_bg.jpg) center 0 no-repeat;
+}
+#wrapper {padding:5px;}
+.i-box {overflow:hidden;zoom:1;}
+.f-box {
+	position:relative;
+	float:left;
+	min-width:240px;width:25%;
+	
+	padding:5px;
+	
+}
+.f-box .chart {position:relative;height:240px;background-color:rgba(255,255,255,1);}
+.f-box.big {width:50%;min-width:480px;}
+
+.f-box.spc>.chart {
+	background:none;
+	border:2px solid #1897d3;
+}
+.f-box.spc>.chart:before,
+.f-box.spc>.chart:after{
+	content:"";
+	position:absolute;left:-4px;top:-4px;
+	width: 24px;height:24px;
+	background: url(../style/img/ico_corner.png) 0 0 no-repeat;
+}
+.f-box.spc>.chart:after {
+	left:auto;right:-4px;
+	background-position-x:-24px; 
+}
+</style>
+<div id="wrapper">
+	<div class="i-box top">
+	<div class="f-box"><div id="chart_1" class="chart"></div></div>
+	<div class="f-box big">
+		<h1>九江军分区民兵平台</h1>
+	</div>
+	<div class="f-box"><div id="chart_4" class="chart"></div></div>
+	</div>
+	
+	<div class="i-box middle">
+	<div class="f-box"><div id="chart_2" class="chart"></div></div>
+	<div class="f-box big"><div id="chart_7" class="chart"></div></div>
+	<div class="f-box">
+		<div id="chart_5" class="chart">
+			<h3>区域民兵力量</h3>
+			<div class="com-tb">
+				<div class="tb-hd">
+					<span class="tb-td title">县区</span>
+					<span class="tb-td num">应急力量</span>
+					<span class="tb-td num">专业力量</span>
+					<span class="tb-td num">特殊力量</span>
+				</div>
+				<ul class="tb-list">
+					<li>
+						<em class="tb-td title">浔阳区</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">濂溪区</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">柴桑区</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">武宁县</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">修水县</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">永修县</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">德安县</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">都昌县</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">湖口县</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">彭泽县</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">瑞昌市</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">共青城市</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+					<li>
+						<em class="tb-td title">庐山市</em>
+						<em class="tb-td num">123</em>
+						<em class="tb-td num">231</em>
+						<em class="tb-td num">161</em>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="i-box bottom">
+	<div class="f-box"><div id="chart_3" class="chart"></div></div>
+	<div class="f-box spc"><div class="chart"></div></div>
+	<div class="f-box spc"><div class="chart"></div></div>
+	<div class="f-box spc"><div id="chart_6" class="chart"></div></div>
+	</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.nicescroll.min.js"></script>
+<script src="../js/hc/hc.js"></script>
+<script src="../js/hc/hc-3d.js"></script>
+<script src="../js/chart.js"></script>
+</body>
+</html>
