@@ -150,27 +150,26 @@ $('#chart_3').highcharts({
 			enabled: true,
 			alpha: 45
 		},
-		backgroundColor: 'none'
+		backgroundColor: 'none',
+		spacingTop:32
 	},
 	colors:[
-		'#DDDF0D',
-		'#55BF3B',
-		'#DF5353',
 		'#7798BF',
-		'#aaeeee',
 		'#ff0066',
 		'#aaeeee',
 		'#55BF3B',
 		'#DF5353',
 		'#7798BF',
 		'#aaeeee'
+		
 	],
 	title: {
 		text: '民兵性别统计',
 		align: 'left',
 		style: {
 			"fontSize": "14px",
-			"color":"rgba(255,255,255,.62)"
+			"color":"rgba(255,255,255,.62)",
+			"display":"none"
 		}
 	},
 	credits:{enabled: false},
@@ -283,7 +282,8 @@ $('#chart_6').highcharts({
 			//enabled: true,
 			alpha: 45
 		},
-		backgroundColor: 'none'
+		backgroundColor: 'none',
+		spacingTop:32
 	},
 	colors:[
 		'#DDDF0D',
@@ -303,7 +303,8 @@ $('#chart_6').highcharts({
 		align: 'left',
 		style: {
 			"fontSize": "14px",
-			"color":"rgba(255,255,255,.62)"
+			"color":"rgba(255,255,255,.62)",
+			"display":"none"
 		}
 	},
 	credits:{enabled: false},
@@ -340,7 +341,8 @@ $('#chart_6').highcharts({
 $('#chart_7').highcharts({
 	chart: {
 		type: 'column',
-		backgroundColor: 'none'
+		backgroundColor: 'none',
+		spacingTop:32
 		//type: 'area'
 	},
 	colors:[
@@ -355,7 +357,8 @@ $('#chart_7').highcharts({
 		align: 'left',
 		style: {
 			"fontSize": "14px",
-			"color":"rgba(255,255,255,.62)"
+			"color":"rgba(255,255,255,.62)",
+			"display":"none"
 		}
 	},
 	credits:{enabled: false},
@@ -408,10 +411,15 @@ $('#chart_8').highcharts({
 			//enabled: true,
 			alpha: 45
 		},
-		backgroundColor: 'none'
+		backgroundColor: 'none',
+		spacingTop:32
 	},
 	colors:[
+		'#DDDF0D',
+		'#55BF3B',
+		'#DF5353',
 		'#7798BF',
+		'#aaeeee',
 		'#ff0066',
 		'#aaeeee',
 		'#55BF3B',
@@ -424,7 +432,8 @@ $('#chart_8').highcharts({
 		align: 'left',
 		style: {
 			"fontSize": "14px",
-			"color":"rgba(255,255,255,.62)"
+			"color":"rgba(255,255,255,.62)",
+			"display":"none"
 		}
 	},
 	credits:{enabled: false},
@@ -481,9 +490,9 @@ $('#chart_count_1').highcharts({
 	yAxis: {
 		title: {
 			text: '应急力量',
-			y:108,
+			y:100,
 			style:{
-				'font-weight':'700',
+				'font-weight':'400',
 				'font-size':'16px',
 				'color':'rgba(255,255,255,.62)'
 			}
@@ -537,9 +546,9 @@ $('#chart_count_2').highcharts({
 	yAxis: {
 		title: {
 			text: '专业力量',
-			y:108,
+			y:100,
 			style:{
-				'font-weight':'700',
+				'font-weight':'400',
 				'font-size':'16px',
 				'color':'rgba(255,255,255,.62)'
 			}
@@ -595,9 +604,9 @@ $('#chart_count_3').highcharts({
 		//tickWidth: 0,
 		title: {
 			text: '特殊力量',
-			y:108,
+			y:100,
 			style:{
-				'font-weight':'700',
+				'font-weight':'400',
 				'font-size':'16px',
 				'color':'rgba(255,255,255,.62)'
 			}

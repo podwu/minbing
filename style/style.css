@@ -201,17 +201,16 @@ textarea.com-input {height:80px;padding:10px;line-height:1.45;}
 	background-color:#eee;
 	background:#eee url(img/index_bg.jpg) center 0 no-repeat;
 }
-#wrapper {padding:8px;}
+#wrapper {padding:8px;min-width:976px;}
 .i-box {overflow:hidden;zoom:1;}
 .f-box {
 	position:relative;
 	float:left;
 	min-width:240px;width:25%;
-	
 	padding:8px;
 	
 }
-.f-box .chart {position:relative;height:240px;background-color:rgba(255,255,255,1);}
+.f-box .chart {position:relative;min-height:240px;height:244px;background-color:rgba(255,255,255,1);}
 .f-box.big {width:50%;min-width:480px;}
 
 .f-box.spc:before,
@@ -245,7 +244,13 @@ h1.title + .main {overflow:hidden;zoom:1;}
 h1.title + .main .count {float:left;width:25%;height:180px;padding:8px;}
 
 .total-box {padding:18px!important;text-align:center;color:#fff;}
-.total-box>.main {background-color:#f06;width:135px;height:135px; border-radius:100%; padding-top:48px;}
+.total-box>.main {
+	background-color:#f06;
+	width:135px;height:135px;
+	margin:0 auto;
+	border-radius:100%; 
+	padding-top:48px;
+}
 .total-box>.main>em,
 .total-box>.main>label {display:block;}
 .total-box>.main>em {font-size:28px;}
