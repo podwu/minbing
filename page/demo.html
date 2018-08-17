@@ -106,11 +106,17 @@
 <div id="chart_7" style="width:640px;height:240px"></div>
 <div id="chart_8" style="width:640px;height:240px"></div>
 <div id="chart_9" style="width:640px;height:240px"></div>
-
+<div style="overflow: hidden;">
+	<div id="count_1" style="width:180px;height:180px;float:left;"></div>
+	<div id="count_2" style="width:180px;height:180px;float:left;"></div>
+	<div id="count_3" style="width:180px;height:180px;float:left;"></div>
+</div>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/jquery.nicescroll.min.js"></script>
 <script src="../js/hc/hc.js"></script>
 <script src="../js/hc/hc-3d.js"></script>
+<script src="../js/hc/hc-more.js"></script>
+<script src="../js/hc/solid-gauge.js"></script>
 <script>
 $(".tb-list").niceScroll({cursorborder:"",cursorcolor:"#ddd",boxzoom:true,touchbehavior:true});
 
@@ -355,6 +361,171 @@ $('#chart_7').highcharts({
 	},{
 		name: '2018年',
 		data: [85,86,76,88,80,78]
+	}]
+});
+
+
+//数据统计
+$('#count_1').highcharts({
+	chart: {
+		type: 'solidgauge'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {
+		title: {
+			text: '应急力量',
+			y:108,
+			style:{
+				'font-weight':'700',
+				'font-size':'16px'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		}
+	},
+	credits: {enabled: false},
+	series: [{
+		name: '应急力量',
+		data: [45],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}%</span>' 
+		}
+	}]
+});
+$('#count_2').highcharts({
+	chart: {
+		type: 'solidgauge'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {
+		title: {
+			text: '专业力量',
+			y:108,
+			style:{
+				'font-weight':'700',
+				'font-size':'16px'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		}
+	},
+	credits: {enabled: false},
+	series: [{
+		name: '专业力量',
+		data: [25],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}%</span>' 
+		}
+	}]
+});
+$('#count_3').highcharts({
+	chart: {
+		type: 'solidgauge'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {
+		title: {
+			text: '特殊力量',
+			y:108,
+			style:{
+				'font-weight':'700',
+				'font-size':'16px'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		}
+	},
+	credits: {enabled: false},
+	series: [{
+
+		data: [30],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}%</span>' 
+		}
 	}]
 });
 

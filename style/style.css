@@ -120,9 +120,9 @@ textarea.com-input {height:80px;padding:10px;line-height:1.45;}
 .com-tb .tb-list>li,
 .com-tb .tb-hd {overflow:hidden;zoom:1;}
 .com-tb .tb-list {height:200px;overflow-y:auto;}
-.com-tb .tb-list>li {border-top:1px solid #eee;}
-.com-tb .tb-list>li:last-child {border-bottom:1px solid #eee;}
-.com-tb .tb-list>li:first-child {border:none;}
+.com-tb .tb-list>li {border-bottom:1px solid #eee;}
+
+.com-tb .tb-list>li:last-child {border:none;}
 .com-tb .tb-hd {
 	border:1px solid #eee;
 	background-color:#f9f9f9;

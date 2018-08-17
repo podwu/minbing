@@ -1,4 +1,4 @@
-$(".tb-list").niceScroll({cursorborder:"",cursorcolor:"#ddd",boxzoom:true,touchbehavior:true});
+$(".tb-list").niceScroll({cursorborder:"",cursorcolor:"#1897d3",boxzoom:true,touchbehavior:true});
 
 //各兵种数量
 $('#chart_1').highcharts({
@@ -8,18 +8,38 @@ $('#chart_1').highcharts({
 		align: 'left',
 		style: {
 			"fontSize": "14px",
-			"color":"#999"
+			"color":"rgba(255,255,255,.62)"
 		}
 	},
+	colors:[
+		
+		'#aaeeee',
+		'#ff0066',
+		'#aaeeee',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee'
+	],
 	credits:{enabled: false},
-	xAxis: {categories: ['保障军', '陆军', '海军', '空军', '火箭军'],},
+	xAxis: {
+		categories: ['保障军', '陆军', '海军', '空军', '火箭军'],
+		labels:{
+			style:{
+				'color':'#dddddd'
+			}
+		},
+		lineWidth: 0,
+		tickLength: 0
+	},
 	yAxis: {visible: false},
 	plotOptions: {
 		bar: {
 			dataLabels: {
 				enabled: true,
 				allowOverlap: true // 允许数据标签重叠
-			}
+			},
+			borderWidth: 0,
 		}
 	},
 	legend: {
@@ -29,8 +49,9 @@ $('#chart_1').highcharts({
 		x: 0,
 		y: 0,
 		floating: true,
-		borderWidth: 1,
-		backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF')
+		borderWidth: 0,
+		backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(255,255,255,.62)'),
+		
 	},
 	series: [{
 		name: '分队数',
@@ -49,9 +70,21 @@ $('#chart_2').highcharts({
 		align: 'left',
 		style: {
 			"fontSize": "14px",
-			"color":"#999"
+			"color":"rgba(255,255,255,.62)"
 		}
 	},
+	colors:[
+		
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee',
+		'#ff0066',
+		'#aaeeee',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee'
+	],
 	credits:{enabled: false},
 	xAxis: {
 		categories: [
@@ -69,10 +102,20 @@ $('#chart_2').highcharts({
 			'共青城市',
 			'庐山市'
 		],
-		crosshair: true
+		crosshair: true,
+		labels:{
+			style:{
+				'color':'#dddddd'
+			}
+		},
+		
 	},
 	yAxis: {
 		visible: false
+	},
+	legend:{
+		itemStyle:{color:'#dddddd'},
+		itemHoverStyle: {color: '#ffffff'}
 	},
 	plotOptions: {
 		column: {
@@ -102,12 +145,25 @@ $('#chart_3').highcharts({
 		},
 		backgroundColor: 'none'
 	},
+	colors:[
+		'#DDDF0D',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee',
+		'#ff0066',
+		'#aaeeee',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee'
+	],
 	title: {
 		text: '民兵性别统计',
 		align: 'left',
 		style: {
 			"fontSize": "14px",
-			"color":"#999"
+			"color":"rgba(255,255,255,.62)"
 		}
 	},
 	credits:{enabled: false},
@@ -141,12 +197,19 @@ $('#chart_4').highcharts({
 		align: 'left',
 		style: {
 			"fontSize": "14px",
-			"color":"#999"
+			"color":"rgba(255,255,255,.62)"
 		}
 	},
 	credits:{enabled: false},
 	xAxis: {
-		categories: ['团', '营', '连', '排']
+		categories: ['团', '营', '连', '排'],
+		labels:{
+			style:{
+				'color':'#dddddd'
+			}
+		},
+		lineWidth: 0,
+		tickLength: 0
 	},
 	yAxis: {
 		min: 0,
@@ -158,7 +221,8 @@ $('#chart_4').highcharts({
 	legend: {enabled: false},
 	plotOptions: {
 		series: {
-			stacking: 'normal'
+			stacking: 'normal',
+			borderWidth: 0,
 		}
 	},
 	series: [{
@@ -213,18 +277,30 @@ $('#chart_6').highcharts({
 		},
 		backgroundColor: 'none'
 	},
-	colors:			 ['#DDDF0D','#55BF3B','#DF5353','#7798BF','#aaeeee','#ff0066','#aaeeee','#55BF3B','#DF5353','#7798BF','#aaeeee'],
+	colors:[
+		'#DDDF0D',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee',
+		'#ff0066',
+		'#aaeeee',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee'
+	],
 	title: {
 		text: '民兵年龄统计',
 		align: 'left',
 		style: {
 			"fontSize": "14px",
-			"color":"#c0c0c0"
+			"color":"rgba(255,255,255,.62)"
 		}
 	},
 	credits:{enabled: false},
 	legend:{
-		itemStyle:{color:'#a0a0a0'},
+		itemStyle:{color:'#dddddd'},
 		itemHoverStyle: {color: '#ffffff'}
 	},
 	plotOptions: {
@@ -238,7 +314,9 @@ $('#chart_6').highcharts({
 					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
 				}
 			},
-			showInLegend: true
+			showInLegend: true,
+			borderWidth: 0
+		
 		}
 	},
 	series: [{
@@ -257,12 +335,19 @@ $('#chart_7').highcharts({
 		backgroundColor: 'none'
 		//type: 'area'
 	},
+	colors:[
+		'#aaeeee',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee'
+	],
 	title: {
 		text: '历年训练成绩',
 		align: 'left',
 		style: {
 			"fontSize": "14px",
-			"color":"#999"
+			"color":"rgba(255,255,255,.62)"
 		}
 	},
 	credits:{enabled: false},
@@ -270,11 +355,20 @@ $('#chart_7').highcharts({
 		categories: [
 			'射击','队列','战术','救护','内务','理论'
 		],
-		crosshair: true
+		crosshair: true,
+		labels:{
+			style:{
+				'color':'#dddddd'
+			}
+		}
 	},
 	yAxis: {
 		min: 0,
 		visible: false
+	},
+	legend:{
+		itemStyle:{color:'#dddddd'},
+		itemHoverStyle: {color: '#ffffff'}
 	},
 	plotOptions: {
 		/*
@@ -284,6 +378,10 @@ $('#chart_7').highcharts({
 			lineWidth: 1,
 		}
 		*/
+		column: {
+			borderWidth: 0,
+			//stacking: 'normal'
+		}
 	},
 	series: [{
 		name: '2017年',
@@ -291,5 +389,234 @@ $('#chart_7').highcharts({
 	},{
 		name: '2018年',
 		data: [85,86,76,88,80,78]
+	}]
+});
+
+//政治面貌统计
+$('#chart_8').highcharts({
+	chart: {
+		type: 'pie',
+		options3d: {
+			//enabled: true,
+			alpha: 45
+		},
+		backgroundColor: 'none'
+	},
+	colors:[
+		'#7798BF',
+		'#ff0066',
+		'#aaeeee',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee'
+	],
+	title: {
+		text: '民兵政治面貌统计',
+		align: 'left',
+		style: {
+			"fontSize": "14px",
+			"color":"rgba(255,255,255,.62)"
+		}
+	},
+	credits:{enabled: false},
+	legend:{
+		itemStyle:{color:'#dddddd'},
+		itemHoverStyle: {color: '#ffffff'}
+	},
+	plotOptions: {
+		pie: {
+			innerSize:50,
+			depth: 25,
+			dataLabels: {
+				enabled: false,
+				//format: '<b>{point.name}</b>:{y}',
+				style: {
+						color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			},
+			
+			showInLegend: true,
+			borderWidth: 0
+		}
+	},
+	series: [{
+		name: '民兵人数',
+		data: [
+			['党员', 780],
+			['团员', 260],
+		]
+	}]
+});
+
+
+//数据统计
+$('#chart_count_1').highcharts({
+	chart: {
+		type: 'solidgauge',
+		backgroundColor: 'none'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#fff',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {
+		title: {
+			text: '应急力量',
+			y:108,
+			style:{
+				'font-weight':'700',
+				'font-size':'16px',
+				'color':'rgba(255,255,255,.62)'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		}
+	},
+	credits: {enabled: false},
+	series: [{
+		name: '应急力量',
+		data: [45],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}%</span>' 
+		}
+	}]
+});
+$('#chart_count_2').highcharts({
+	chart: {
+		type: 'solidgauge',
+		backgroundColor: 'none'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#fff',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {
+		title: {
+			text: '专业力量',
+			y:108,
+			style:{
+				'font-weight':'700',
+				'font-size':'16px',
+				'color':'rgba(255,255,255,.62)'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		}
+	},
+	credits: {enabled: false},
+	series: [{
+		name: '专业力量',
+		data: [25],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}%</span>' 
+		}
+	}]
+});
+$('#chart_count_3').highcharts({
+	chart: {
+		type: 'solidgauge',
+		backgroundColor: 'none'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#fff',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {	
+		//minorTickInterval: null,
+		//tickWidth: 0,
+		title: {
+			text: '特殊力量',
+			y:108,
+			style:{
+				'font-weight':'700',
+				'font-size':'16px',
+				'color':'rgba(255,255,255,.62)'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		}
+	},
+	credits: {enabled: false},
+	series: [{
+		data: [30],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}%</span>' 
+		}
 	}]
 });
