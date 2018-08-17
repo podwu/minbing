@@ -2,11 +2,17 @@ $(".tb-list").niceScroll({cursorborder:"",cursorcolor:"#1897d3",boxzoom:true,tou
 
 //各兵种数量
 $('#chart_1').highcharts({
-	chart: {type: 'bar',backgroundColor: 'none'},
+	chart: {
+		type: 'bar',
+		backgroundColor: 'none',
+		//marginTop: 32,
+		spacingTop: 32,
+	},
 	title: {
-		text: '各兵种数量',
+		text: null,
 		align: 'left',
 		style: {
+			'display':'none',
 			"fontSize": "14px",
 			"color":"rgba(255,255,255,.62)"
 		}
@@ -64,11 +70,12 @@ $('#chart_1').highcharts({
 
 //区域数量统计
 $('#chart_2').highcharts({
-    chart: {type: 'column',backgroundColor: 'none'},
+    chart: {type: 'column',backgroundColor: 'none',spacingTop:32},
 	title: {
 		text: '各区域分队及民兵数',
 		align: 'left',
 		style: {
+			"display":"none",
 			"fontSize": "14px",
 			"color":"rgba(255,255,255,.62)"
 		}
@@ -191,11 +198,12 @@ $('#chart_3').highcharts({
 
 //民兵建制统计
 $('#chart_4').highcharts({
-	chart: {type: 'bar',backgroundColor: 'none'},
+	chart: {type: 'bar',backgroundColor: 'none',spacingTop:32},
 	title: {
-		text: '民兵建制统计',
+		text: '民兵建制区域统计',
 		align: 'left',
 		style: {
+			"display":"none",
 			"fontSize": "14px",
 			"color":"rgba(255,255,255,.62)"
 		}

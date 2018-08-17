@@ -7,64 +7,12 @@
 <title>九江军分区民兵平台</title>
 </head>
 <body id="bd_index">
-<style>
-#bd_index {
-	background-color:#eee;
-	background:#eee url(../style/img/index_bg.jpg) center 0 no-repeat;
-}
-#wrapper {padding:8px;}
-.i-box {overflow:hidden;zoom:1;}
-.f-box {
-	position:relative;
-	float:left;
-	min-width:240px;width:25%;
-	
-	padding:8px;
-	
-}
-.f-box .chart {position:relative;height:240px;background-color:rgba(255,255,255,1);}
-.f-box.big {width:50%;min-width:480px;}
-
-.f-box.spc:before,
-.f-box.spc:after{
-	content:"";
-	position:absolute;left:6px;bottom:6px;
-	width: 24px;height:24px;
-	background: url(../style/img/ico_corner.png) -48px 0 no-repeat;
-}
-.f-box.spc:after {
-	left:auto;right:6px;
-	background-position-x:-72px; 
-}
-.f-box.spc>.chart {
-	background:none;
-	border:2px solid #1897d3;
-}
-.f-box.spc>.chart:before,
-.f-box.spc>.chart:after{
-	content:"";
-	position:absolute;left:-4px;top:-4px;
-	width: 24px;height:24px;
-	background: url(../style/img/ico_corner.png) 0 0 no-repeat;
-}
-.f-box.spc>.chart:after {
-	left:auto;right:-4px;
-	background-position-x:-24px; 
-}
-h1.title {text-align:center;font-size:24px;color:#fff;letter-spacing:4px;padding:18px 0 18px;}
-h1.title + .main {overflow:hidden;zoom:1;}
-h1.title + .main .count {float:left;width:25%;height:180px;padding:8px;}
-
-.total-box {padding:18px!important;text-align:center;color:#fff;}
-.total-box>.main {background-color:#f06;width:135px;height:135px; border-radius:100%; padding-top:48px;}
-.total-box>.main>em,
-.total-box>.main>label {display:block;}
-.total-box>.main>em {font-size:28px;}
-.total-box>.main>label {font-size:16px;margin-top:8px;color:rgba(255,255,255,.8);}
-</style>
 <div id="wrapper">
 	<div class="i-box top">
-		<div class="f-box spc"><div id="chart_1" class="chart"></div></div>
+		<div class="f-box spc">
+			<h3>各兵种力量</h3>
+			<div id="chart_1" class="chart"></div>
+		</div>
 		<div class="f-box big">
 			<h1 class="title">九江军分区民兵管理平台</h1>
 			<div class="main">
@@ -79,23 +27,20 @@ h1.title + .main .count {float:left;width:25%;height:180px;padding:8px;}
 				<div class="count" id="chart_count_3"></div>
 			</div>
 		</div>
-		<div class="f-box spc"><div id="chart_4" class="chart"></div></div>
+		<div class="f-box spc">
+			<h3>民兵区域建制统计</h3>
+			<div id="chart_4" class="chart"></div>
+		</div>
 	</div>
 	
 	<div class="i-box middle">
 	<div class="f-box spc"><div id="chart_8" class="chart"></div></div>
-	<div class="f-box spc big"><div id="chart_2" class="chart"></div></div>
-<style>
-.chart>h3 {padding:10px 10px 4px;color:rgba(255,255,255,.62);font-weight:400;font-size:14px;}
-.chart .com-tb {padding:10px;}
-.chart .com-tb .tb-list {height:160px;}
-.chart .com-tb .tb-list>li {border-bottom:1px solid rgba(255,255,255,.2);}
-.chart .com-tb .tb-list>li:last-child {border:none;}
-.chart .com-tb .tb-hd {background-color:rgba(24,151,211,.62);border:none;border-radius:2px;}
-.chart .com-tb .tb-td {padding:8px 0 8px 8px;color:rgba(255,255,255,.62);}
-.chart .com-tb .tb-hd .tb-td {color:rgba(255,255,255,.38);}
-</style>
+	<div class="f-box spc big">
+		<h3>区域民兵数量统计</h3>
+		<div id="chart_2" class="chart"></div>
+	</div>
 	<div class="f-box spc">
+		
 		<div id="chart_5" class="chart">
 			<h3>区域民兵力量</h3>
 			<div class="com-tb">
