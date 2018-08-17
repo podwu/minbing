@@ -56,7 +56,7 @@ $('#chart_1').highcharts({
 		y: 0,
 		floating: true,
 		borderWidth: 0,
-		backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(255,255,255,.62)'),
+		backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(255,255,255,.38)'),
 		
 	},
 	series: [{
