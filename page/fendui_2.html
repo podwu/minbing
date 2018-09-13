@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>应急力量区域统计-分队类型统计-九江民兵训练综合管理平台</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body id="bd_fendui" class="bd_chart">
+<div id="wrapper">
+	<div class="chart-title">
+		<h1>应急力量区域统计</h1>
+		<a href="fendui_1.html" class="btn-back"><em>返回</em></a>
+	</div>
+	<div class="f-box spc wide">
+		<div id="chart_fd_2" class="chart"></div>
+	</div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/hc/hc.js"></script>
+<script>
+$('#chart_fd_2').highcharts({
+    chart: {type: 'column',backgroundColor: 'none'},
+	title: {
+		text: '应急力量区域统计',
+		align: 'left',
+		style: {
+			"display":"none",
+			"fontSize":"14px",
+			"color":"rgba(255,255,255,.62)"
+		}
+	},
+	colors:[		
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee',
+		'#ff0066',
+		'#aaeeee',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee'
+	],
+	credits:{enabled: false},
+	xAxis: {
+		categories: [
+			'浔阳区',
+			'濂溪区',
+			'柴桑区',
+			'武宁县',
+			'修水县',
+			'永修县',
+			'德安县',
+			'都昌县',
+			'湖口县',
+			'彭泽县',
+			'瑞昌市',
+			'共青城市',
+			'庐山市'
+		],
+		crosshair: true,
+		labels:{
+			style:{
+				'color':'#dddddd'
+			}
+		},
+		
+	},
+	yAxis: {
+		min:0,
+		labels:{
+			style:{
+				'color':'#dddddd'
+			}
+		},
+		title: {
+			text: '数量 (个)',
+			style:{
+				'color':'#dddddd'
+			}
+		}
+	},
+	legend:{
+		itemStyle:{color:'#dddddd'},
+		itemHoverStyle: {color: '#ffffff'}
+	},
+	plotOptions: {
+		column: {
+			colorByPoint:true
+		},
+		series: {
+            cursor: 'pointer',
+            events: {
+                click: function () {
+                    window.location.href="fendui_list.html"
+                }
+            }
+        }
+	},
+	series: [
+		{
+			name: '民兵数',
+			data: [123,234,123,344,155,267,155,124,145,256,155,263,124]
+		}
+	]
+});
+</script>
+</body>
+</html>

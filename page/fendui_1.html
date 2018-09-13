@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>分队类型统计-九江民兵训练综合管理平台</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body id="bd_fendui" class="bd_chart">
+<div id="wrapper">
+	<div class="chart-title">
+		<h1>分队类型统计</h1>
+		<a href="cover.html" class="btn-back"><em>返回</em></a>
+	</div>
+	<div class="f-box spc wide">
+		<div id="chart_fd_1" class="chart"></div>
+	</div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/hc/hc.js"></script>
+<script>
+$('#chart_fd_1').highcharts({
+	chart:{
+		type:'column',
+		backgroundColor:'none'
+	},
+	colors:[
+		'#DDDF0D',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee',
+		'#ff0066',
+		'#aaeeee',
+		'#55BF3B',
+		'#DF5353',
+		'#7798BF',
+		'#aaeeee'
+	],
+	title: {
+		text:'分队类型统计',
+		align:'left',
+		style:{
+			"fontSize":"14px",
+			"color":"rgba(255,255,255,.62)",
+			"display":"none"
+		}
+	},
+	credits:{enabled: false},
+	xAxis: {
+		categories: [
+			'应急力量','专业力量','特殊力量'
+		],
+		crosshair: true,
+		labels:{
+			style:{
+				'color':'#dddddd'
+			}
+		}
+	},
+	yAxis: {
+		min:0,
+		labels:{
+			style:{
+				'color':'#dddddd'
+			}
+		},
+		title: {
+			text: '数量 (个)',
+			style:{
+				'color':'#dddddd'
+			}
+		}
+	},
+	legend:{
+		itemStyle:{color:'#dddddd'},
+		itemHoverStyle: {color: '#ffffff'}
+	},
+	plotOptions: {
+		column: {
+			colorByPoint:true
+		},
+		series: {
+            cursor: 'pointer',
+            events: {
+                click: function () {
+                    window.location.href="fendui_2.html"
+                }
+            }
+        }
+	},
+	series: [{
+		name: '民兵数',
+		data: [800,760,660]
+	}]
+	
+});
+</script>
+</body>
+</html>

@@ -18,7 +18,6 @@ $('#chart_1').highcharts({
 		}
 	},
 	colors:[
-		
 		'#aaeeee',
 		'#ff0066',
 		'#aaeeee',
@@ -29,14 +28,14 @@ $('#chart_1').highcharts({
 	],
 	credits:{enabled: false},
 	xAxis: {
-		categories: ['保障军', '陆军', '海军', '空军', '火箭军'],
+		categories: ['保障军','陆军','海军','空军','火箭军'],
 		labels:{
 			style:{
 				'color':'#dddddd'
 			}
 		},
-		lineWidth: 0,
-		tickLength: 0
+		lineWidth:0,
+		tickLength:0
 	},
 	yAxis: {visible: false},
 	plotOptions: {
