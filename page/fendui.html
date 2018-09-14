@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>分队类型统计-九江民兵训练综合管理平台</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="../style/style.css">
+</head>
+<body id="bd_fendui" class="bd_chart">
+<div id="wrapper" class="fendui">
+	<div class="chart-title">
+		<h1>分队类型统计</h1>
+		<a href="javascript:history.back();" class="btn-back"><em>返回</em></a>
+	</div>
+	<div class="f-box spc wide">
+		<div class="main chart">
+			<div class="clearfix">
+				<div class="count" id="chart_count_0"></div>
+				<div class="count" id="chart_count_1"></div>
+				<div class="count" id="chart_count_2"></div>
+				<div class="count" id="chart_count_3"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/hc/hc.js"></script>
+<script src="../js/hc/hc-more.js"></script>
+<script src="../js/hc/solid-gauge.js"></script>
+<script>
+//数据统计
+$('#chart_count_0').highcharts({
+	chart: {
+		type: 'solidgauge',
+		backgroundColor: 'none'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#fff',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {
+		title: {
+			text: '民兵总数',
+			y:100,
+			style:{
+				'font-weight':'400',
+				'font-size':'16px',
+				'color':'rgba(255,255,255,.62)'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		stops: [
+            [1, '#f06']
+        ],
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		},
+		series: {
+            cursor: 'pointer',
+            events: {
+                click: function () {
+                    window.location.href="fendui_total.html"
+                }
+            }
+        }
+	},
+	credits: {enabled: false},
+	series: [{
+		name: '民兵总数',
+		data: [23423],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}</span>' 
+		}
+	}]
+});
+$('#chart_count_1').highcharts({
+	chart: {
+		type: 'solidgauge',
+		backgroundColor: 'none'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#fff',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {
+		title: {
+			text: '应急力量',
+			y:100,
+			style:{
+				'font-weight':'400',
+				'font-size':'16px',
+				'color':'rgba(255,255,255,.62)'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		stops: [
+            [0.1, '#55BF3B'],
+            [0.4, '#DDDF0D'], 
+            [0.8, '#DF5353'] 
+        ],
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		},
+		series: {
+            cursor: 'pointer',
+            events: {
+                click: function () {
+                    window.location.href="fendui_2.html"
+                }
+            }
+        }
+	},
+	credits: {enabled: false},
+	series: [{
+		name: '应急力量',
+		data: [45],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}%</span>' 
+		}
+	}]
+});
+$('#chart_count_2').highcharts({
+	chart: {
+		type: 'solidgauge',
+		backgroundColor: 'none'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#fff',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {
+		title: {
+			text: '专业力量',
+			y:100,
+			style:{
+				'font-weight':'400',
+				'font-size':'16px',
+				'color':'rgba(255,255,255,.62)'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		stops: [
+            [0.1, '#55BF3B'],
+            [0.4, '#DDDF0D'], 
+            [0.8, '#DF5353'] 
+        ],
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		},
+		series: {
+            cursor: 'pointer',
+            events: {
+                click: function () {
+                    window.location.href="fendui_2.html"
+                }
+            }
+        }
+	},
+	credits: {enabled: false},
+	series: [{
+		name: '专业力量',
+		data: [25],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}%</span>' 
+		}
+	}]
+});
+$('#chart_count_3').highcharts({
+	chart: {
+		type: 'solidgauge',
+		backgroundColor: 'none'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#fff',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {	
+		title: {
+			text: '特殊力量',
+			y:100,
+			style:{
+				'font-weight':'400',
+				'font-size':'16px',
+				'color':'rgba(255,255,255,.62)'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		stops: [
+            [0.1, '#55BF3B'],
+            [0.4, '#DDDF0D'], 
+            [0.8, '#DF5353'] 
+        ],
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		},
+		series: {
+            cursor: 'pointer',
+            events: {
+                click: function () {
+                    window.location.href="fendui_2.html"
+                }
+            }
+        }
+	},
+	credits: {enabled: false},
+	series: [{
+		data: [30],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}%</span>' 
+		}
+	}]
+});
+</script>
+</body>
+</html>

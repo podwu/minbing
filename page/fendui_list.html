@@ -7,187 +7,139 @@
 <link rel="stylesheet" href="../style/style.css">
 </head>
 <body id="bd_fendui" class="bd_chart">
-<style>
-.chart_list .f-box.wide .chart {padding:30px;height:auto;}
-.chart_list .chart .com-tb .tb-list {height:auto;}
-.chart_list .com-tb .tb-td {
-	padding: 12px 0px 12px 8px;
-	font-size:14px;
-}
-/*page-nav:0*/
-.page-nav {
-	font-size:0;
-	text-align:center;
-	padding:20px 0;
-	border-top:1px solid #eee;
-	background-color:#f9f9f9;
-}
-.page-nav>span,.page-nav>a {
-	display:inline-block;
-	box-sizing:border-box;
-	height:42px;line-height:40px;
-	border:1px solid #ddd;
-	text-align:center;
-	font-size:16px;
-	margin:0 8px;
-	vertical-align:middle;
-	border-radius:2px;
-}
-.page-nav>.btn {
-	width:80px;font-size:0;
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f9f9f9',GradientType=0 );
-	background-color:#f9f9f9;
-	background:linear-gradient(#fff,#f9f9f9);
-}
-.page-nav>.btn.prev,.page-nav>.btn.next {width:110px;}
-.page-nav>.btn>i {font-size:16px;}
-
-.page-nav>.btn.disabled {background:none;background-color:#f9f9f9;}
-.page-nav>.btn.disabled>i,
-.page-nav>.btn.disabled>em {color:#bbb;}
-
-.page-nav>.info {padding:0 20px;font-size:0;width:246px;background-color:#fff;}
-.page-nav>.info>em,.page-nav>.info>i {font-size:16px;color:#666;}
-.page-nav>.info>i {padding:0 6px;color:#ddd;}
-.page-nav>.info>em>b {padding:0 3px;}
-.page-nav>.info>em.cur>b {color:#d90000;}
-/*page-nav:1*/
-</style>
 <div id="wrapper" class="chart_list">
 	<div class="chart-title">
 		<h1>浔阳区应急力量统计</h1>
-		<a href="fendui_2.html" class="btn-back"><em>返回</em></a>
+		<a href="javascript:history.back();" class="btn-back"><em>返回</em></a>
+		<div class="search-box">
+			<input type="text" class="com-input keyword" placeholder="点此输入姓名">
+			<button type="button" class="btn search"><i></i><em>搜索</em></button>
+		</div>
 	</div>
 	<div class="f-box spc wide">
 		<div class="chart">
-			<div class="com-tb big">
+			<div class="com-tb big col6">
 				<div class="tb-hd">
-					<span class="tb-td title">姓名</span>
-					<span class="tb-td num">性别</span>
-					<span class="tb-td">工作单位</span>
-					<span class="tb-td num">手机</span>
+					<span class="tb-td">行政区域</span>
+					<span class="tb-td">所属建制</span>
+					<span class="tb-td">姓名</span>
+					<span class="tb-td">部职别</span>
+					<span class="tb-td">政治面貌</span>
+					<span class="tb-td">固定电话</span>
 				</div>
 				<ul class="tb-list">
 					<li>
 						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
+							<em class="tb-td">浔阳区</em>
+							<em class="tb-td">建制名称1</em>
+							<em class="tb-td">张某某</em>
+							<em class="tb-td">分队长</em>
+							<em class="tb-td">中共党员</em>
+							<em class="tb-td">07928888888</em>
 						</a>
 					</li>
 					<li>
 						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
+							<em class="tb-td">浔阳区</em>
+							<em class="tb-td">建制名称1</em>
+							<em class="tb-td">张某某</em>
+							<em class="tb-td">分队长</em>
+							<em class="tb-td">中共党员</em>
+							<em class="tb-td">07928888888</em>
 						</a>
 					</li>
 					<li>
 						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
+							<em class="tb-td">浔阳区</em>
+							<em class="tb-td">建制名称1</em>
+							<em class="tb-td">张某某</em>
+							<em class="tb-td">分队长</em>
+							<em class="tb-td">中共党员</em>
+							<em class="tb-td">07928888888</em>
 						</a>
 					</li>
 					<li>
 						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
+							<em class="tb-td">浔阳区</em>
+							<em class="tb-td">建制名称1</em>
+							<em class="tb-td">张某某</em>
+							<em class="tb-td">分队长</em>
+							<em class="tb-td">中共党员</em>
+							<em class="tb-td">07928888888</em>
 						</a>
 					</li>
 					<li>
 						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
+							<em class="tb-td">浔阳区</em>
+							<em class="tb-td">建制名称1</em>
+							<em class="tb-td">张某某</em>
+							<em class="tb-td">分队长</em>
+							<em class="tb-td">中共党员</em>
+							<em class="tb-td">07928888888</em>
 						</a>
 					</li>
 					<li>
 						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
+							<em class="tb-td">浔阳区</em>
+							<em class="tb-td">建制名称1</em>
+							<em class="tb-td">张某某</em>
+							<em class="tb-td">分队长</em>
+							<em class="tb-td">中共党员</em>
+							<em class="tb-td">07928888888</em>
 						</a>
 					</li>
 					<li>
 						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
+							<em class="tb-td">浔阳区</em>
+							<em class="tb-td">建制名称1</em>
+							<em class="tb-td">张某某</em>
+							<em class="tb-td">分队长</em>
+							<em class="tb-td">中共党员</em>
+							<em class="tb-td">07928888888</em>
 						</a>
 					</li>
 					<li>
 						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
+							<em class="tb-td">浔阳区</em>
+							<em class="tb-td">建制名称1</em>
+							<em class="tb-td">张某某</em>
+							<em class="tb-td">分队长</em>
+							<em class="tb-td">中共党员</em>
+							<em class="tb-td">07928888888</em>
 						</a>
 					</li>
 					<li>
 						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
+							<em class="tb-td">浔阳区</em>
+							<em class="tb-td">建制名称1</em>
+							<em class="tb-td">张某某</em>
+							<em class="tb-td">分队长</em>
+							<em class="tb-td">中共党员</em>
+							<em class="tb-td">07928888888</em>
 						</a>
 					</li>
 					<li>
 						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
-						</a>
-					</li>
-					<li>
-						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
-						</a>
-					</li>
-					<li>
-						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
-						</a>
-					</li>
-					<li>
-						<a href="fendui_person.html">
-						<em class="tb-td title">张某某</em>
-						<em class="tb-td num">男</em>
-						<em class="tb-td num">单位名称单位名称单位名称1</em>
-						<em class="tb-td num">15612341234</em>
+							<em class="tb-td">浔阳区</em>
+							<em class="tb-td">建制名称1</em>
+							<em class="tb-td">张某某</em>
+							<em class="tb-td">分队长</em>
+							<em class="tb-td">中共党员</em>
+							<em class="tb-td">07928888888</em>
 						</a>
 					</li>
 				</ul>
 				<div class="page-nav">
-				<span class="btn first disabled"><em>首页</em></span>
-				<span class="btn prev disabled"><i>&lt;</i><em>上一页</em></span>
-				<span class="info"><em class="cur">第<b>1</b>页</em><i>/</i><em>共<b>4</b>页</em></span>
-				<a href="#" class="btn next"><em>下一页</em><i>&gt;</i></a>
-				<a href="#" class="btn last"><em>尾页</em></a>
-			</div>
+					<span class="btn first disabled"><em>首页</em></span>
+					<span class="btn prev disabled"><i>&lt;</i><em>上一页</em></span>
+					<span class="info"><em class="cur">第<b>1</b>页</em><i>/</i><em>共<b>4</b>页</em></span>
+					<a href="#" class="btn next"><em>下一页</em><i>&gt;</i></a>
+					<a href="#" class="btn last"><em>尾页</em></a>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 <script src="../js/jquery.min.js"></script>
-<script>
-
-</script>
 </body>
 </html>

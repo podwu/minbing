@@ -1,5 +1,3 @@
-$(".tb-list").niceScroll({cursorborder:"",cursorcolor:"#1897d3",boxzoom:true,touchbehavior:true});
-
 //各兵种数量
 $('#chart_1').highcharts({
 	chart: {
@@ -47,16 +45,9 @@ $('#chart_1').highcharts({
 			borderWidth: 0,
 		}
 	},
-	legend: {
-		layout: 'vertical',
-		align: 'right',
-		verticalAlign: 'top',
-		x: 0,
-		y: 0,
-		floating: true,
-		borderWidth: 0,
-		backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(255,255,255,.38)'),
-		
+	legend:{
+		itemStyle:{color:'#dddddd'},
+		itemHoverStyle: {color: '#ffffff'}
 	},
 	series: [{
 		name: '分队数',
@@ -208,7 +199,7 @@ $('#chart_4').highcharts({
 	},
 	credits:{enabled: false},
 	xAxis: {
-		categories: ['团', '营', '连', '排'],
+		categories: ['营', '连', '排'],
 		labels:{
 			style:{
 				'color':'#dddddd'
@@ -233,43 +224,43 @@ $('#chart_4').highcharts({
 	},
 	series: [{
 		name: '浔阳区',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '濂溪区',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '柴桑区',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '武宁县',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '修水县',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '永修县',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '德安县',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '都昌县',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '湖口县',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '彭泽县',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '瑞昌市',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '共青城市',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	},{
 		name: '庐山市',
-		data: [2, 4, 8, 16]
+		data: [4, 8, 16]
 	}]
 });
 
@@ -615,6 +606,11 @@ $('#chart_count_3').highcharts({
 				'display':'none'
 			}
 		},
+		stops: [
+            [0.1, '#55BF3B'], // green
+            [0.5, '#DDDF0D'], // yellow
+            [0.9, '#DF5353'] // red
+        ],
 		min: 0,
 		max: 100
 	},
@@ -633,6 +629,73 @@ $('#chart_count_3').highcharts({
 		dataLabels: {
 			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
 			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}%</span>' 
+		}
+	}]
+});
+$('#chart_count_0').highcharts({
+	chart: {
+		type: 'solidgauge',
+		backgroundColor: 'none'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '50%'],
+		size: '100%',
+		startAngle: -135,
+		endAngle: 135,
+		background: {
+			backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#fff',
+			innerRadius: '60%',
+			outerRadius: '100%',
+			shape: 'arc'
+		}
+	},
+	tooltip: {enabled: false},
+	yAxis: {
+		title: {
+			text: '民兵总数',
+			y:100,
+			style:{
+				'font-weight':'400',
+				'font-size':'16px',
+				'color':'rgba(255,255,255,.62)'
+			}
+		},
+		labels: {
+			style:{
+				'display':'none'
+			}
+		},
+		stops: [
+            [1, '#f06']
+        ],
+		min: 0,
+		max: 100
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: {
+				y: -18,
+				borderWidth: 0,
+				useHTML: true
+			}
+		},
+		series: {
+            cursor: 'pointer',
+            events: {
+                click: function () {
+                    window.location.href="fendui_total.html"
+                }
+            }
+        }
+	},
+	credits: {enabled: false},
+	series: [{
+		name: '民兵总数',
+		data: [23423],
+		dataLabels: {
+			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}</span>' 
 		}
 	}]
 });

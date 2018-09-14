@@ -11,7 +11,7 @@
 <div id="wrapper">
 	<div class="chart-title">
 		<h1>分队类型统计</h1>
-		<a href="cover.html" class="btn-back"><em>返回</em></a>
+		<a href="javascript:history.back();" class="btn-back"><em>返回</em></a>
 	</div>
 	<div class="f-box spc wide">
 		<div id="chart_fd_1" class="chart"></div>
@@ -80,7 +80,7 @@ $('#chart_fd_1').highcharts({
 	},
 	plotOptions: {
 		column: {
-			colorByPoint:true
+			//colorByPoint:true
 		},
 		series: {
             cursor: 'pointer',
@@ -94,6 +94,9 @@ $('#chart_fd_1').highcharts({
 	series: [{
 		name: '民兵数',
 		data: [800,760,660]
+	},{
+		name: '分队数',
+		data: [80,76,66]
 	}]
 	
 });

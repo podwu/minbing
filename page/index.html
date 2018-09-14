@@ -17,12 +17,15 @@
 		<div class="f-box big">
 			<h1 class="title">九江军分区民兵管理平台</h1>
 			<div class="main">
-				<div class="count total-box">
+				<div class="count total-box dis_0">
+					<a href="###">
 					<div class="main">
 						<em>21345</em>
 						<label>民兵总数</label>
 					</div>
+					</a>
 				</div>
+				<div class="count" id="chart_count_0"></div>
 				<div class="count" id="chart_count_1"></div>
 				<div class="count" id="chart_count_2"></div>
 				<div class="count" id="chart_count_3"></div>
@@ -50,8 +53,7 @@
 		<div class="f-box spc">
 			<a href="###1" class="btn-more">查看详细</a>
 			<div id="chart_5" class="chart">
-				<h3>区域民兵力量</h3>
-				
+				<h3>区域民兵力量</h3>	
 				<div class="com-tb">
 					<div class="tb-hd">
 						<span class="tb-td title">县区</span>
@@ -168,5 +170,8 @@
 <script src="../js/hc/hc-more.js"></script>
 <script src="../js/hc/solid-gauge.js"></script>
 <script src="../js/chart.js"></script>
+<script>
+$(".tb-list").niceScroll({cursorborder:"",cursorcolor:"#1897d3",boxzoom:true,touchbehavior:true});
+</script>
 </body>
 </html>

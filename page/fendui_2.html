@@ -11,13 +11,12 @@
 <div id="wrapper">
 	<div class="chart-title">
 		<h1>应急力量区域统计</h1>
-		<a href="fendui_1.html" class="btn-back"><em>返回</em></a>
+		<a href="javascript:history.back();" class="btn-back"><em>返回</em></a>
 	</div>
 	<div class="f-box spc wide">
 		<div id="chart_fd_2" class="chart"></div>
 	</div>
 </div>
-
 <script src="../js/jquery.min.js"></script>
 <script src="../js/hc/hc.js"></script>
 <script>
@@ -88,7 +87,7 @@ $('#chart_fd_2').highcharts({
 	},
 	plotOptions: {
 		column: {
-			colorByPoint:true
+			//colorByPoint:true
 		},
 		series: {
             cursor: 'pointer',
@@ -103,6 +102,9 @@ $('#chart_fd_2').highcharts({
 		{
 			name: '民兵数',
 			data: [123,234,123,344,155,267,155,124,145,256,155,263,124]
+		},{
+			name: '分队数',
+			data: [12,23,12,34,15,26,15,12,14,25,15,26,12]
 		}
 	]
 });
