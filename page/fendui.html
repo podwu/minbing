@@ -51,10 +51,10 @@ $('#chart_count_0').highcharts({
 	yAxis: {
 		title: {
 			text: '民兵总数',
-			y:100,
+			y:160,
 			style:{
 				'font-weight':'400',
-				'font-size':'16px',
+				'font-size':'2em',
 				'color':'rgba(255,255,255,.62)'
 			}
 		},
@@ -66,19 +66,19 @@ $('#chart_count_0').highcharts({
 		stops: [
             [1, '#f06']
         ],
-		min: 0,
-		max: 100
+		min:0,
+		max:100
 	},
 	plotOptions: {
 		solidgauge: {
 			dataLabels: {
-				y: -18,
+				y: -68,
 				borderWidth: 0,
 				useHTML: true
 			}
 		},
 		series: {
-            cursor: 'pointer',
+            cursor:'pointer',
             events: {
                 click: function () {
                     window.location.href="fendui_total.html"
@@ -91,8 +91,8 @@ $('#chart_count_0').highcharts({
 		name: '民兵总数',
 		data: [23423],
 		dataLabels: {
-			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
-			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}</span>' 
+			format: '<div style="text-align:center;margin-top:3em;"><span style="font-size:3em;color:' +
+			((Highcharts.theme && Highcharts.theme.contrastTextColor)||'rgba(255,255,255,1)') + '">{y}</span>' 
 		}
 	}]
 });
@@ -118,10 +118,10 @@ $('#chart_count_1').highcharts({
 	yAxis: {
 		title: {
 			text: '应急力量',
-			y:100,
+			y:160,
 			style:{
 				'font-weight':'400',
-				'font-size':'16px',
+				'font-size':'2em',
 				'color':'rgba(255,255,255,.62)'
 			}
 		},
@@ -141,7 +141,7 @@ $('#chart_count_1').highcharts({
 	plotOptions: {
 		solidgauge: {
 			dataLabels: {
-				y: -18,
+				y: -68,
 				borderWidth: 0,
 				useHTML: true
 			}
@@ -160,7 +160,7 @@ $('#chart_count_1').highcharts({
 		name: '应急力量',
 		data: [45],
 		dataLabels: {
-			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			format: '<div style="text-align:center;margin-top:3em;"><span style="font-size:3em;color:' +
 			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}%</span>' 
 		}
 	}]
@@ -187,10 +187,10 @@ $('#chart_count_2').highcharts({
 	yAxis: {
 		title: {
 			text: '专业力量',
-			y:100,
+			y:160,
 			style:{
 				'font-weight':'400',
-				'font-size':'16px',
+				'font-size':'2em',
 				'color':'rgba(255,255,255,.62)'
 			}
 		},
@@ -210,7 +210,7 @@ $('#chart_count_2').highcharts({
 	plotOptions: {
 		solidgauge: {
 			dataLabels: {
-				y: -18,
+				y: -68,
 				borderWidth: 0,
 				useHTML: true
 			}
@@ -229,7 +229,7 @@ $('#chart_count_2').highcharts({
 		name: '专业力量',
 		data: [25],
 		dataLabels: {
-			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			format: '<div style="text-align:center;margin-top:3em;"><span style="font-size:3em;color:' +
 			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}%</span>' 
 		}
 	}]
@@ -256,10 +256,10 @@ $('#chart_count_3').highcharts({
 	yAxis: {	
 		title: {
 			text: '特殊力量',
-			y:100,
+			y:160,
 			style:{
 				'font-weight':'400',
-				'font-size':'16px',
+				'font-size':'2em',
 				'color':'rgba(255,255,255,.62)'
 			}
 		},
@@ -279,7 +279,7 @@ $('#chart_count_3').highcharts({
 	plotOptions: {
 		solidgauge: {
 			dataLabels: {
-				y: -18,
+				y: -68,
 				borderWidth: 0,
 				useHTML: true
 			}
@@ -297,7 +297,7 @@ $('#chart_count_3').highcharts({
 	series: [{
 		data: [30],
 		dataLabels: {
-			format: '<div style="text-align:center"><span style="font-size:18px;color:' +
+			format: '<div style="text-align:center;margin-top:3em;"><span style="font-size:3em;color:' +
 			((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'rgba(255,255,255,1)') + '">{y}%</span>' 
 		}
 	}]

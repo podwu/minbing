@@ -118,8 +118,15 @@ textarea.com-input {height:80px;padding:10px;line-height:1.45;}
 }
 /*com-tip:1*/
 /*ComTable:0*/
-.com-tb .tb-list>li,
-.com-tb .tb-hd {overflow:hidden;zoom:1;}
+.com-tb .tb-list>li:after,
+.com-tb .tb-hd:after {
+	visibility:hidden;
+  	display:block;
+  	font-size:0;
+  	content:" ";
+  	clear:both;
+  	height:0;
+}
 .com-tb .tb-list {height:200px;overflow-y:auto;}
 .com-tb .tb-list>li {border-bottom:1px solid #eee;}
 
@@ -576,3 +583,43 @@ h1.title + .main .count {float:left;width:25%;height:180px;padding:8px;}
 .com-table td {border-color:#fff;}
 #tb_total .com-table thead {background-color:rgba(255,255,255,.2);}
 /*table:blue:1*/
+/*Selex-tBox:0*/
+.select-box {position:relative;}
+.select-box>select {
+	display:block;
+	width:100%;height:45px;line-height:45px;
+	-webkit-appearance:none;
+	font-family:'microsoft yahei';
+	background:none;
+	border:none;
+	padding:0 30px 0 12px;
+	outline:0;
+	font-size:14px;
+	color:#fff;
+	color:rgba(255,255,255,.38);
+}
+.select-box:after {
+	/*
+	content:"";
+	position:absolute;top:50%;right:10px;
+	font-size:0;
+	border-bottom:2px solid #fff;border-right:2px solid #fff;
+	width:6px;height:6px;
+	margin-top:-5px;
+	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg);
+	*/
+	content:"";
+	overflow:hidden;
+	width:0;height:0;
+	border-style:dashed;
+	border-color:transparent;
+	position:absolute;top:50%;right:10px;
+	margin-top:-3px;
+	border-top-style:solid;
+	border-width:5px;
+	border-top-color:#fff;
+}
+.select-box>select>option {background-color:#0059b2;}
+.chart_list .com-tb .tb-td.hasSelect {padding:0;}
+/*Select-Box:1*/

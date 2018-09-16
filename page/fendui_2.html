@@ -6,7 +6,6 @@
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="../style/style.css">
 </head>
-
 <body id="bd_fendui" class="bd_chart">
 <div id="wrapper">
 	<div class="chart-title">
@@ -95,7 +94,10 @@ $('#chart_fd_2').highcharts({
                 click: function () {
                     window.location.href="fendui_list.html"
                 }
-            }
+            },dataLabels: {
+				enabled: true,
+				format: '{point.y:f}'
+			}
         }
 	},
 	series: [
